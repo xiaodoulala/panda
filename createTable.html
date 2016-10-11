@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div id="mytable"></div>
+    <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+    <script>
+        function createTable(rowcount,cellcount){
+        var table=$("<table>");
+        table.appendTo("#mytable");
+        for(var i=0;i<rowcount;i++){
+            var tr=$("<tr></tr>");
+            tr.appendTo(table);
+            for(var j=0;j<cellcount;j++){
+            	var td=$("<td>"+i*j+"</td>");
+            	td.appendTo(tr);
+            }
+        }
+        }
+        createTable(3,4);
+    </script>
+</body>
+</html>
+
