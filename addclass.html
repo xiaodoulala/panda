@@ -1,0 +1,42 @@
+﻿<!--addClass和removeClass的运用  -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <form action="#" method="POST" id="regForm">
+        <fieldset>
+          <legend>个人基本信息</legend>
+          <div>
+            <label for="username">名称：</label>
+            <input type="text" id="username">
+          </div>
+          <div>
+            <label for="password">密码：</label>
+            <input type="password" id="password">
+          </div>
+          <div>
+            <label for="msg">详细信息：</label>
+            <textarea id="msg"></textarea>
+          </div>
+        </fieldset>
+    <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+    <script>
+        $(function(){
+          $(":input").focus(function(){
+                      $(this).addClass("focus");
+                    }).blur(function(){
+                      $(this).removeClass("focus");
+                    })
+
+        })
+    </script>
+</body>
+</html>
+
+.focus{
+  border: 1px solid #f00;
+  background: #fcc;
+}
